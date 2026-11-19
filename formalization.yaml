@@ -1,0 +1,70 @@
+version: "v0.4"
+project:
+  name: An asymptotic formula for the equality count in Erdős Problem 878(iv)
+  description: >-
+    The equality count for the functions f and F of Erdős Problem 878 is
+    asymptotic to an explicit sum of logarithmic integrals indexed by the
+    cofactor of the largest prime. Finite polynomial tests determine the sets
+    of integration. The argument controls the discarded integers and sums a
+    quantitative prime number theorem over the resulting intervals.
+  authors: [Rivka Lipkovitz]
+  responsible_maintainers: [Rivka Lipkovitz]
+  license: Apache-2.0
+classification:
+  arxiv: [math.NT]
+  msc2020: ["11N37", "11N25"]
+sources:
+  - title: Derivation of the cofactor integral formula for Erdős Problem 878(iv)
+    type: original-proof
+    relationship: other
+    note: The formula and argument were developed in a private AI-assisted session led by the submitter. Priority relative to unpublished work is unknown.
+  - title: On two unconventional number theoretic functions and on some related problems
+    authors: [Paul Erdős]
+    type: article
+    location: https://www.erdosproblems.com/878
+    relationship: background
+  - title: Erdős Problem 878
+    type: website
+    location: https://www.erdosproblems.com/878
+    contributors:
+      - name: Thomas F. Bloom
+        role: editor
+    relationship: background
+related_formalizations:
+  - id: https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/878.lean
+    relationship: builds-on
+    note: Uses the same definitions of f and F and supplies part (iv)'s answer.
+  - id: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd/blob/2c476fa6441c607096d93c8fc7ac0a227a655dae/PrimeNumberTheoremAnd/MediumPNT.lean
+    relationship: builds-on
+    note: Provides the quantitative prime number theorem for the Chebyshev function.
+status:
+  scope: Part (iv), with positive integers n strictly below the natural endpoint x.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: []
+automation:
+  methods:
+    - method: agent
+      models: [GPT-6 family]
+      framework: OpenAI Codex
+      tool_setup: A coordinating Codex agent and parallel Codex agents developed the proof and debugged it against Lean and Mathlib.
+      cost:
+        spend_usd: not tracked
+        hardware: Local Apple Silicon machine, with API inference.
+  spend_usd: not tracked
+  notes: Rivka Lipkovitz selected the target, directed the AI-assisted investigation, requested the formal proof, and is responsible for the submission. Codex developed the mathematical argument and wrote and checked the Lean proofs.
+fidelity:
+  divergences: The strict inequality n < x and natural-valued endpoint x match the Formal Conjectures statement. There are no extra hypotheses.
+review:
+  status: Locally kernel-checked
+  reviewers: []
+  notes: The Lean build checks the proof and its axiom dependencies. Independent human mathematical review is not claimed.
+alignment:
+  namespace: Erdos878
+  statements:
+    - source: Erdős Problem 878(iv)
+      lean: Erdos878.erdos_878.parts.iv
+      module: Solution
+      status: proved
+      note: The explicit answer sums logarithmic integrals over real sets determined by the prime factors of each cofactor.
+acknowledgements: Mathlib contributors, the Formal Conjectures authors, the PrimeNumberTheoremAnd contributors, and OpenAI Codex.

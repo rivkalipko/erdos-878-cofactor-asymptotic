@@ -1,0 +1,24 @@
+name = "erdos878_proofs"
+defaultTargets = ["Erdos878Proofs", "Challenge", "Solution"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "v4.35.0"
+
+[[require]]
+name = "PrimeNumberTheoremAnd"
+git = "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git"
+rev = "2c476fa6441c607096d93c8fc7ac0a227a655dae"
+
+[[lean_lib]]
+name = "Erdos878Proofs"
+globs = ["Erdos878Proofs.+"]
+
+[[lean_lib]]
+name = "Challenge"
+roots = ["Challenge"]
+
+[[lean_lib]]
+name = "Solution"
+roots = ["Solution"]

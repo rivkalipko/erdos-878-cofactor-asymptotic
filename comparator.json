@@ -1,0 +1,26 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": ["Erdos878.erdos_878.parts.iv"],
+  "definition_names": [
+    "Erdos878.f",
+    "Erdos878.F",
+    "Erdos878.E",
+    "Erdos878.cofactorThreshold",
+    "Erdos878.omegaCutoff",
+    "Erdos878.CofactorIndex",
+    "Erdos878.cofactorBase",
+    "Erdos878.CofactorExponents",
+    "Erdos878.cofactorValue",
+    "Erdos878.realPrimeExponent",
+    "Erdos878.cofactorGood",
+    "Erdos878.cofactorLower",
+    "Erdos878.cofactorUpper",
+    "Erdos878.cofactorIndices",
+    "Erdos878.cofactorIntegral",
+    "Erdos878.cofactorAnswer",
+    "Erdos878.erdos_878.parts.iv.answer"
+  ],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+  "enable_nanoda": true
+}
