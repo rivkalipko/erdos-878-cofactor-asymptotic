@@ -11,9 +11,7 @@ For each positive integer $m<x/Y$ with at most $K$ distinct prime factors, let $
 The theorem proves
 
 ```math
-E(x)\sim
-\sum_{\substack{1\le m<x/Y\\ \omega(m)\le K}}
-\int_{I_m(x)}\frac{du}{\log u}.
+E(x)\sim\sum_{1\le m\lt x/Y,\ \omega(m)\le K}\int_{I_m(x)}\frac{du}{\log u}.
 ```
 
 The proof bounds the count discarded as smooth, divisible by a large square, or having too many prime factors by $o(x/\log x)$. Each retained integer has a unique largest prime $p$, and the finite test at $u=p$ characterizes equality for $n=mp$. Polynomial roots divide the real test into finitely many intervals. Their number grows slowly enough to sum the quantitative prime number theorem errors over all intervals and cofactors. The primes alone give $E(x)\gg x/\log x$, which turns the additive error into an asymptotic equivalent.
