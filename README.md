@@ -2,19 +2,19 @@
 
 Let $E(x)$ count positive integers $n<x$ for which $f(n)=F(n)$, with the definitions in Formal Conjectures. Set
 
-$$
+```math
 Y=\exp((\log x)^{2/3}),\qquad K=\lfloor (\log x)^{1/20}\rfloor,\qquad L=\lfloor\log_2 x\rfloor .
-$$
+```
 
 For each positive integer $m<x/Y$ with at most $K$ distinct prime factors, let $I_m(x)$ be the set of $u$ in $(\max(Y,P^+(m)),x/m)$ passing the following finite test. Here $P^+(1)=0$. Use the prime factors of $m$ and the variable $u$ as bases. Each product with exponents from $0$ to $L$ and value in $[2,mu]$ must be at most the sum of the largest pure powers at most $mu$ of its bases with positive exponent. Use the same exponent range for the pure powers.
 
 The theorem proves
 
-$$
+```math
 E(x)\sim
 \sum_{\substack{1\le m<x/Y\\ \omega(m)\le K}}
 \int_{I_m(x)}\frac{du}{\log u}.
-$$
+```
 
 The proof bounds the count discarded as smooth, divisible by a large square, or having too many prime factors by $o(x/\log x)$. Each retained integer has a unique largest prime $p$, and the finite test at $u=p$ characterizes equality for $n=mp$. Polynomial roots divide the real test into finitely many intervals. Their number grows slowly enough to sum the quantitative prime number theorem errors over all intervals and cofactors. The primes alone give $E(x)\gg x/\log x$, which turns the additive error into an asymptotic equivalent.
 
